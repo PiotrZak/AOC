@@ -1,8 +1,9 @@
 import math as m, re
+import time
+
+st = time.time()
 
 board = list(open('3.txt'))
-
-
 coords_chars = {(r, c): [] for r in range(140) for c in range(140)
                     if board[r][c] not in '01234566789.'}
 
@@ -30,3 +31,9 @@ for r, row in enumerate(board):
 
 print(sum(sum(p)    for p in coords_chars.values()),
       sum(m.prod(p) for p in coords_chars.values() if len(p)==2))
+
+
+et = time.time()
+elapsed_time = et - st
+print('Execution time:', elapsed_time, 'seconds')
+#Execution time: 0.005763053894042969 seconds
