@@ -23,7 +23,6 @@ for game in lines:
     # ['3 blue, 4 red', '1 red, 2 green, 6 blue', '2 green']
     sets = [s.split(':', 1)[-1].strip() for s in sets_with_game]
 
-
     game_possible = all(
         check_if_exceed_limit({
             color: int(quantity)

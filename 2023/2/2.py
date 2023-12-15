@@ -22,7 +22,6 @@ def check_if_exceed_limit(bag):
             return False
     return True
 
-
 games_ids = 0
 
 for game in lines:
