@@ -15,10 +15,14 @@ for card in cards:
     lucky_common = win_nums.intersection(lottery_nums)
 
     if lucky_common:
+        # This is a common approach in scoring systems
+        # where more significant matches are rewarded more generously.
         points += 2 ** (len(lucky_common) - 1)
 
 print(points)
 ## ** - in python 3 ** 3 = 27, 9 ** 9 = 81
+## 2 ** 0 = 1
+
 
     # results of lucky_common:
 
