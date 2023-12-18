@@ -34,7 +34,7 @@ def match_seed_to_resources(seed, resources):
     
     min_location = float('inf')
     for x in map(int, seeds):
-        for resource in resources[1:]gi:
+        for resource in resources[1:]:
             for resource_coords in (resource[1:]):
                 resource_coords = tuple(map(int, resource_coords.split()))
                 d, s, r = resource_coords
