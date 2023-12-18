@@ -1,0 +1,55 @@
+# Seed number 79 corresponds to soil number 81.
+# Seed number 14 corresponds to soil number 14.
+# Seed number 55 corresponds to soil number 57.
+# Seed number 13 corresponds to soil number 13.
+
+
+#locations = [define_location(seed) for seed in seeds]
+
+# seeds: 79 14 55 13
+
+# I 
+#
+# soils (e.g. '50 98 2'):
+# destination range starts at: 50
+# source range start at: 98
+# range length is: 2
+
+# so available soils:
+# 50, 51,
+# 98, 99
+
+# II
+# range
+# 52, 50, 58
+# d: 52
+# s: 50
+# r: 48
+
+# 50, 51 ... 96, 97
+# 52, 53 ... 98, 99
+
+
+
+# find the lowest location number that corresponds to any of the initial seeds
+
+# Seed 79, soil 81, fertilizer 81, water 81, light 74, temperature 78, humidity 78, location 82.
+# Seed 14, soil 14, fertilizer 53, water 49, light 42, temperature 42, humidity 43, location 43.
+# Seed 55, soil 57, fertilizer 57, water 53, light 46, temperature 82, humidity 82, location 86.
+# Seed 13, soil 13, fertilizer 52, water 41, light 34, temperature 34, humidity 35, location 35.
+    
+Results of ranges per particular resource:
+
+soils: [{range(98, 100), range(50, 52)}, {range(52, 100), range(50, 98)}]
+fertilizers [{range(15, 52), range(0, 37)}, {range(52, 54), range(37, 39)}, {range(0, 15), range(39, 54)}]
+waters [{range(49, 57), range(53, 61)}, {range(0, 42), range(11, 53)}, {range(42, 49), range(0, 7)}, {range(57, 61), range(7, 11)}]
+lights [{range(88, 95), range(18, 25)}, {range(18, 88), range(25, 95)}]
+temperature [{range(45, 68), range(77, 100)}, {range(45, 64), range(81, 100)}, {range(64, 77), range(68, 81)}]
+humidities [{range(69, 70), range(0, 1)}, {range(0, 69), range(1, 70)}]
+locations [{range(56, 93), range(60, 97)}, {range(93, 97), range(56, 60)}]
+
+
+Seed 79 is correlated in resource set: [{range(88, 95), range(18, 25)}, {range(18, 88), range(25, 95)}]
+Seed 55 is correlated in resource set: [{range(88, 95), range(18, 25)}, {range(18, 88), range(25, 95)}]
+Seed 14 is correlated in resource set: [{range(0, 1), range(69, 70)}, {range(0, 69), range(1, 70)}]
+Seed 13 is correlated in resource set: [{range(0, 1), range(69, 70)}, {range(0, 69), range(1, 70)}]
