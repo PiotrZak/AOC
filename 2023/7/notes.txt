@@ -1,0 +1,20 @@
+Interesting concept:
+
+https://github.com/efvincent/aoc2022/blob/main/src/Y2023/Day07.hs
+
+
+especially functional way of this (Haskell):
+
+case 8 `elem` cards' of
+    False -> hand
+    True | all (== 8) cards' -> (cards', (6, bid))
+    True ->
+      let bestNonJoker = 
+            snd                              -- take the card that won
+            . minimumBy (comparing Down)     -- sort descending, take the first
+            . map (\g -> (length g, head g)) -- make a tuple w/ group len & card
+            . group                          -- group by card
+            . sortOn id                      -- default sort cards
+            . filter (/= 8) $ cards' in  -- disregard jokers
+      let rank' = rankOf $ replaceAll 8 bestNonJoker cards' in 
+      (cards',(rank', bid))
