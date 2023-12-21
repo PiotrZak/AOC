@@ -1,4 +1,7 @@
 import re
+import time
+
+st = time.time()
 
 network = open("8.txt").read().splitlines()
 direction = list(network[0])
@@ -21,4 +24,11 @@ while True:
     break
 
 print(steps)
-print("This way took:", points)
+print("This way according:", points)
+et = time.time()
+elapsed_time = et - st
+print('Execution time:', elapsed_time, 'seconds')
+
+
+#Least common multiple
+
