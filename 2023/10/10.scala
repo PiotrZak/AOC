@@ -52,6 +52,23 @@ object PipeMaze {
       }
     }
 
+     // Explore the maze with pruning
+
+     
+    // val visited = mutable.Set[Complex]()
+    // val stack = mutable.Stack[Complex]()
+    // stack.push(startPosition)
+
+    // while (stack.nonEmpty) {
+    //   val cur = stack.pop()
+    //   if (!visited(cur)) {
+    //     visited.add(cur)
+    //     val newNeighbors = getNeighs(cur).filterNot(visited.contains)
+    //     stack.pushAll(newNeighbors)
+    //   }
+    // }
+
+
     // Output the result
     println(path)
     println(path.size / 2)
